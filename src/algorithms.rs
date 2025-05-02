@@ -1,5 +1,5 @@
 use std::collections::{HashMap, HashSet, VecDeque};
-
+// Module containing BFS and Degree Centrality code 
 /// BFS: Find the shortest path between two nodes in an unweighted graph.
 /// 
 /// This function uses a **breadth-first search (BFS)** algorithm to find the **shortest path** between the `start_node` and `target_node` in the graph. The graph is represented as a 
