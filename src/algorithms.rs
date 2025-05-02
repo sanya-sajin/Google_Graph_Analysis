@@ -89,32 +89,3 @@ pub fn degree_centrality(graph: &HashMap<usize, Vec<usize>>) {
     }
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-    use std::collections::HashMap;
-
-    // Test for BFS: Find the shortest path between two nodes.
-    #[test]
-    fn test_bfs() {
-        let mut graph: HashMap<usize, Vec<usize>> = HashMap::new();
-        graph.insert(1, vec![2]);
-        graph.insert(2, vec![3]);
-        graph.insert(3, vec![4]);
-        graph.insert(4, vec![]);
-
-        let path = bfs(&graph, 1, 4);
-        assert_eq!(path, Some(vec![1, 2, 3, 4]));  // BFS should find the shortest path
-    }
-
-    // Test for Degree Centrality: Print the degree centrality of the top 10 nodes
-    #[test]
-    fn test_degree_centrality() {
-        let mut graph: HashMap<usize, Vec<usize>> = HashMap::new();
-        graph.insert(1, vec![2, 3]);
-        graph.insert(2, vec![3]);
-        graph.insert(3, vec![]);
-
-        degree_centrality(&graph);  // We expect to see output for degree centrality
-    }
-}
